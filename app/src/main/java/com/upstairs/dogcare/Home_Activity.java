@@ -22,7 +22,11 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.nikoyuwono.toolbarpanel.ToolbarPanelLayout;
 import com.nikoyuwono.toolbarpanel.ToolbarPanelListener;
 import com.nirhart.parallaxscroll.views.ParallaxListView;
@@ -52,6 +56,7 @@ public class Home_Activity extends AppCompatActivity {
 
     public TextView cardCount;
     public static final long Week_IN_MILLISEC = 7*1000 * 60 * 60 * 24;
+    InterstitialAd mInterstitialAd;
 
 
 
@@ -111,6 +116,12 @@ public class Home_Activity extends AppCompatActivity {
         }
 
         listView.setAdapter(adapter);
+
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        requestNewInterstitial();
+
 
         breeds_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -286,6 +297,14 @@ public class Home_Activity extends AppCompatActivity {
             }
         });
 
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                finish();
+            }
+        });
+
+
     }
 
 
@@ -314,6 +333,14 @@ public class Home_Activity extends AppCompatActivity {
         return Categories;
     }
 
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("FC28156733FE3A25D5D5777C8C35F75F")
+                .build();
+
+        mInterstitialAd.loadAd(adRequest);
+    }
+
 
 
 
@@ -323,7 +350,9 @@ public class Home_Activity extends AppCompatActivity {
 
             toolbarPanelLayout.closePanel();;
             return;
-        } else {
+        } else if(mInterstitialAd.isLoaded()){
+            mInterstitialAd.show();
+        } else{
             finish();
         }
     }

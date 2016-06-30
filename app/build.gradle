@@ -31,4 +31,7 @@ dependencies {
     compile 'com.github.nirhart:parallaxscroll:1.0'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.firebase:firebase-ads:9.2.0'
 }
+
+apply plugin: 'com.google.gms.google-services'
