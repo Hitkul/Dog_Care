@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -73,6 +74,7 @@ public class CardsActivity extends AppCompatActivity {
     LinearLayout relodeButtonlast;
     LinearLayout backButtonlast;
     LinearLayout homeButtonlast;
+    LinearLayout shareButtonlast;
 
 
 
@@ -98,12 +100,14 @@ public class CardsActivity extends AppCompatActivity {
         relodeButtonlast = (LinearLayout)findViewById(com.upstairs.dogcare.R.id.relodeButtonlast);
         backButtonlast = (LinearLayout)findViewById(com.upstairs.dogcare.R.id.backButtonlast);
         homeButtonlast = (LinearLayout)findViewById(com.upstairs.dogcare.R.id.homeButtonlast);
+        shareButtonlast = (LinearLayout)findViewById(com.upstairs.dogcare.R.id.shareButtonlast);
         final List<String> categories = getCategoriesFromDb();//Categories from DB
 
         if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             relodeButtonlast.setBackgroundResource(com.upstairs.dogcare.R.drawable.ripple_button);
             backButtonlast.setBackgroundResource(com.upstairs.dogcare.R.drawable.ripple_button);
             homeButtonlast.setBackgroundResource(com.upstairs.dogcare.R.drawable.ripple_button);
+            shareButtonlast.setBackgroundResource(com.upstairs.dogcare.R.drawable.ripple_button);
         }
 
         cards = getCardsFromDB();
@@ -227,6 +231,15 @@ public class CardsActivity extends AppCompatActivity {
             }
         });
 
+        shareButtonlast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.upstairs.dogcare"));
+                startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -250,6 +263,7 @@ public class CardsActivity extends AppCompatActivity {
         relodeButtonlast.setVisibility(View.VISIBLE);
         backButtonlast.setVisibility(View.VISIBLE);
         homeButtonlast.setVisibility(View.VISIBLE);
+        shareButtonlast.setVisibility(View.VISIBLE);
 
 
 
@@ -284,6 +298,7 @@ public class CardsActivity extends AppCompatActivity {
         relodeButtonlast.startAnimation(buttonAnimSet);
         backButtonlast.startAnimation(buttonAnimSet);
         homeButtonlast.startAnimation(buttonAnimSet);
+        shareButtonlast.startAnimation(buttonAnimSet);
 
 
     }
@@ -298,6 +313,7 @@ public class CardsActivity extends AppCompatActivity {
         relodeButtonlast.setVisibility(View.GONE);
         backButtonlast.setVisibility(View.GONE);
         homeButtonlast.setVisibility(View.GONE);
+        shareButtonlast.setVisibility(View.GONE);
     }
 
     void setCards(){
