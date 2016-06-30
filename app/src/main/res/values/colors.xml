@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#34495e</color>
+    <color name="panel_color_dark">#243342</color>
+
+
+    <color name="cards_background">#afa292</color>
+    <color name="panel_color">#20668e</color>
+    <color name="list_color">#d5d3d5</color>
+    <color name="list_text_color">#000000</color>
+    <color name="card_activity_background_text">#675b4c</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="black_overlay">#66000000</color>
+
+</resources>

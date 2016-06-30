@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:orientation="vertical"
+        >
+        <!--Dog image-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:transitionName="@string/transition_name_image"
+            android:layout_height="250dp"
+            android:layout_marginTop="-30dp"
+            android:adjustViewBounds="true"
+            android:id="@+id/dog_image"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <!--dog name-->
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:text="NAME"
+            android:layout_marginTop="-12dp"
+            android:textSize="24sp"
+            android:textColor="@color/panel_color"
+            android:layout_below="@+id/dog_image"
+            android:layout_centerHorizontal="true" />
+
+        <!--card text-->
+        <TextView
+            android:id="@+id/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginTop="7dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/panel_color"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:text="Tag line"
+
+            android:layout_below="@+id/card_title"
+            android:layout_centerHorizontal="true"/>
+
+        <!--card list-->
+        <TextView
+            android:id="@+id/card_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:textSize="16sp"
+            android:text="Random text"
+            android:textColor="@color/panel_color"
+            android:layout_below="@+id/card_text">
+        </TextView>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

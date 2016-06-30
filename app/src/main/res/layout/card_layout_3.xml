@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:orientation="vertical">
+
+        <!--disease name-->
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="NAME"
+            android:paddingTop="15dp"
+            android:paddingBottom="2dp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/panel_color"
+            android:layout_centerHorizontal="true" />
+
+
+        <!--disease image-->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="-10dp"
+            android:id="@+id/disease_image"
+            android:layout_below="@+id/card_title"
+            android:layout_centerHorizontal="true" />
+
+
+        <!--card text-->
+        <TextView
+            android:id="@+id/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-13dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/panel_color"
+            android:layout_below="@+id/disease_image"
+            android:layout_centerHorizontal="true"/>
+
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

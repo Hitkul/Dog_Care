@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_color"
+
+    tools:context="com.upstairs.dogcare.search">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:elevation="5dp"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:gravity="top"
+        app:elevation="0dp"
+        android:background="@color/panel_color" >
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/backButton"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/back"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="17dp"
+            android:layout_alignParentLeft="true"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:id="@+id/title_settings"
+            android:layout_alignBottom="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:divider="@color/black"
+        android:layout_alignParentStart="true">
+        <Switch
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="Notification"
+            android:id="@+id/Notification_switch" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:alpha="0.3"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear Recent"
+            android:background="?attr/selectableItemBackground"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:clickable="true"
+            android:paddingRight="10dp"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:id="@+id/clearRecent" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

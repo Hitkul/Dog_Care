@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="0dp"
+    android:background="@color/cards_background"
+    android:layout_height="match_parent"
+    tools:context="com.upstairs.dogcare.CardsActivity">
+
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/backButton"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:background="@drawable/back"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="17dp"
+        android:layout_alignParentLeft="true"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/breedName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/homeButton"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:background="@drawable/home"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="17dp"
+        android:layout_alignParentRight="true"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/cardCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/card_activity_background_text"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/check"
+        android:src="@drawable/check"
+        android:layout_marginTop="60dp"
+        />
+
+    <LinearLayout
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/relodeButtonlast"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:layout_below="@+id/check"
+        android:layout_marginTop="35dp">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/relodeButtonCard"
+            android:background="@drawable/replay"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relode"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            android:text="Reload Cards"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButtonlast"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_below="@+id/relodeButtonlast"
+        android:layout_marginTop="35dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/backButtonCard"
+            android:background="@drawable/ic_back"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            android:text="Back to Breeds"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeButtonlast"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_below="@+id/backButtonlast"
+        android:layout_marginTop="35dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/homeButtonCard"
+            android:background="@drawable/ic_home"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            android:text="Back to Home"/>
+
+    </LinearLayout>
+
+
+
+    <com.wenchao.cardstack.CardStack
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="67dp"
+        android:paddingBottom="30dp"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+
+
+
+</RelativeLayout>

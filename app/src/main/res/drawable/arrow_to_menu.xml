@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00030"/>
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00032"/>
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00034"/>
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00036"/>
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00038"/>
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00040"/>
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00042"/>
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00044"/>
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00046"/>
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00048"/>
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00050"/>
+
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00052"/>
+
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00054"/>
+
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00056"/>
+
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00058"/>
+
+
+    <item
+        android:duration="1"
+        android:drawable="@drawable/menu_to_arrow_00059"/>
+
+</animation-list>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nikoyuwono.toolbarpanel.ToolbarPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_down_toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:panelId="@+id/panel"
+    app:pullableToolbarId="@+id/toolbar">
+
+
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/list_color"
+        android:outlineProvider="paddedBounds">
+
+    <com.nirhart.parallaxscroll.views.ParallaxListView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/breed_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/list_color"
+        android:layout_marginBottom="55dp"
+        app:parallax_factor="1.0"
+        app:circular_parallax="true"
+        tools:context="com.upstairs.dogcare.Breeds_list"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/panel_color"
+        >
+
+
+        <ListView
+            android:id="@+id/cat_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+        </ListView>
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:gravity="top"
+        app:elevation="0dp"
+        android:background="@color/panel_color" >
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageButton"
+            android:background="@drawable/menu_to_arrow"
+            android:clickable="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+
+        <TextView
+            android:id="@+id/cat_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Categories"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/searchButton"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/search"
+            android:layout_marginRight="22dp"
+            android:layout_gravity = "right"
+            android:clickable="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/homeButton"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/home"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:layout_centerHorizontal="true" />
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+</com.nikoyuwono.toolbarpanel.ToolbarPanelLayout>
